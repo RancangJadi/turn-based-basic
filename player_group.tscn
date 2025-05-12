@@ -1,0 +1,31 @@
+[gd_scene load_steps=6 format=3 uid="uid://bnflefxcifu3t"]
+
+[ext_resource type="Script" uid="uid://dnaiswq34h4we" path="res://player_group.gd" id="1_4qi8q"]
+[ext_resource type="PackedScene" uid="uid://cufwo2d3646l3" path="res://character.tscn" id="1_ydtnl"]
+[ext_resource type="Texture2D" uid="uid://cnfuq85wjcmqa" path="res://Battlers/World01_006_Witch.png" id="2_yt2o6"]
+[ext_resource type="Texture2D" uid="uid://bb74ketley2fs" path="res://Battlers/World01_004_WailingPrince.png" id="4_ao132"]
+[ext_resource type="Texture2D" uid="uid://bin66anj68ewb" path="res://Battlers/World04_003_ Outlaw.png" id="5_c8kvg"]
+
+[node name="PlayerGroup" type="Node2D"]
+script = ExtResource("1_4qi8q")
+
+[node name="Character" parent="." instance=ExtResource("1_ydtnl")]
+
+[node name="Sprite2D" parent="Character" index="0"]
+texture = ExtResource("2_yt2o6")
+
+[node name="Character2" parent="." instance=ExtResource("1_ydtnl")]
+
+[node name="Sprite2D" parent="Character2" index="0"]
+position = Vector2(-4.76837e-07, -4.76837e-07)
+scale = Vector2(0.730469, 0.730469)
+texture = ExtResource("4_ao132")
+
+[node name="Character3" parent="." instance=ExtResource("1_ydtnl")]
+
+[node name="Sprite2D" parent="Character3" index="0"]
+texture = ExtResource("5_c8kvg")
+
+[editable path="Character"]
+[editable path="Character2"]
+[editable path="Character3"]
